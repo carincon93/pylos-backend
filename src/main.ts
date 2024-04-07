@@ -7,9 +7,10 @@ import express from 'express'
 import { join } from 'path'
 import { I18nValidationExceptionFilter, I18nValidationPipe } from 'nestjs-i18n'
 
-process.env.TZ = 'America/Bogota'
+process.env.TZ
 const port = process.env.PORT || 3000
 console.log(`Launching NestJS app on port ${port}, URL: http://0.0.0.0:${port}`)
+console.log(process.env.TZ)
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule)
