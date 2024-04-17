@@ -20,6 +20,7 @@ export class PreguntaPruebaDiagnosticaService {
                     select: {
                         id: true,
                         opcion: true,
+                        esOpcionCorrecta: true,
                     },
                 },
             },
@@ -74,6 +75,7 @@ export class PreguntaPruebaDiagnosticaService {
                     select: {
                         id: true,
                         opcion: true,
+                        esOpcionCorrecta: true,
                     },
                 },
             },
