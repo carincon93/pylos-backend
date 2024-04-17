@@ -14,7 +14,31 @@ export class RespuestaPruebaDiagnosticaService {
     }
 
     findAll() {
-        return this.prisma.respuestaPruebaDiagnostica.findMany()
+        return this.prisma.respuestaPruebaDiagnostica.findMany({
+            include: {
+                usuario: {
+                    select: {
+                        nombre: true,
+                    },
+                },
+                preguntaPruebaDiagnostica: {
+                    select: {
+                        pregunta: true,
+                        esPreguntaCerrada: true,
+                    },
+                },
+                opcionPruebaDiagnostica: {
+                    select: {
+                        opcion: true,
+                        esOpcionCorrecta: true,
+                        respuestaPruebaDiagnostica: true,
+                    },
+                },
+            },
+            orderBy: {
+                createdAt: 'asc',
+            },
+        })
     }
 
     findOne(id: string) {
