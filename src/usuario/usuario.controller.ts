@@ -16,8 +16,6 @@ export class UsuarioController {
         return this.usuarioService.create(createUsuarioDto)
     }
 
-    // @ApiBearerAuth()
-    // @UseGuards(AuthGuard)
     @Get()
     findAll() {
         return this.usuarioService.findAll()
