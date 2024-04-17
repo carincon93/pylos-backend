@@ -6,6 +6,7 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger'
 import { Req, UseGuards } from '@nestjs/common/decorators'
 import { AuthGuard } from 'src/auth/jwt-auth.guard'
 import { AuthService } from 'src/auth/auth.service'
+import { UsuarioService } from 'src/usuario/usuario.service'
 
 @ApiTags('Respuesta de prueba diagnóstica')
 @Controller('respuesta-prueba-diagnostica')
@@ -15,6 +16,7 @@ export class RespuestaPruebaDiagnosticaController {
     constructor(
         private readonly authService: AuthService,
         private readonly respuestaPruebaDiagnosticaService: RespuestaPruebaDiagnosticaService,
+        private readonly usuarioService: UsuarioService,
     ) {}
 
     @Post()
@@ -22,7 +24,9 @@ export class RespuestaPruebaDiagnosticaController {
         const response = await this.authService.getUserFromToken(req)
 
         createRespuestaPruebaDiagnosticaDto.usuarioId = response?.id
-        createRespuestaPruebaDiagnosticaDto.respuesta = createRespuestaPruebaDiagnosticaDto.respuesta.toUpperCase()
+        if (createRespuestaPruebaDiagnosticaDto.respuesta) {
+            createRespuestaPruebaDiagnosticaDto.respuesta = createRespuestaPruebaDiagnosticaDto.respuesta.toUpperCase()
+        }
 
         return this.respuestaPruebaDiagnosticaService.create(createRespuestaPruebaDiagnosticaDto)
     }
@@ -45,5 +49,10 @@ export class RespuestaPruebaDiagnosticaController {
     @Delete(':id')
     remove(@Param('id') id: string) {
         return this.respuestaPruebaDiagnosticaService.remove(id)
+    }
+
+    @Get('obtener/tabla-de-posiciones')
+    getTablaPosiciones() {
+        return this.usuarioService.getTablaPosiciones()
     }
 }
