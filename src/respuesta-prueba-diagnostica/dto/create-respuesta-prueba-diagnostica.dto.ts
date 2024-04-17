@@ -17,4 +17,7 @@ export class CreateRespuestaPruebaDiagnosticaDto {
     @ApiProperty()
     @IsNotEmpty()
     preguntaPruebaDiagnosticaId: string
+
+    @ApiProperty()
+    esRespuestaCorrecta: boolean
 }

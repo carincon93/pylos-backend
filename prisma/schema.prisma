@@ -68,6 +68,7 @@ model RespuestaPruebaDiagnostica {
   opcionPruebaDiagnostica     OpcionPruebaDiagnostica?      @relation(fields: [opcionPruebaDiagnosticaId], references: [id])
   preguntaPruebaDiagnosticaId String                        @db.Uuid
   preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica     @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
+  esRespuestaCorrecta         Boolean?    
   createdAt                   DateTime?                     @default(now())
   updatedAt                   DateTime?                     @updatedAt
 }
