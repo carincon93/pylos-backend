@@ -9,8 +9,8 @@ import { AuthService } from 'src/auth/auth.service'
 
 @ApiTags('Pregunta de prueba diagnóstica')
 @Controller('pregunta-prueba-diagnostica')
-@ApiBearerAuth()
-@UseGuards(AuthGuard)
+// @ApiBearerAuth()
+// @UseGuards(AuthGuard)
 export class PreguntaPruebaDiagnosticaController {
     constructor(
         private readonly authService: AuthService,

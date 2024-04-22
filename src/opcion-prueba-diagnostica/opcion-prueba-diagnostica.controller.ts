@@ -8,8 +8,8 @@ import { AuthGuard } from 'src/auth/jwt-auth.guard'
 
 @ApiTags('Opción de prueba diagnóstica')
 @Controller('opcion-prueba-diagnostica')
-@ApiBearerAuth()
-@UseGuards(AuthGuard)
+// @ApiBearerAuth()
+// @UseGuards(AuthGuard)
 export class OpcionPruebaDiagnosticaController {
     constructor(private readonly opcionPruebaDiagnosticaService: OpcionPruebaDiagnosticaService) {}
 
