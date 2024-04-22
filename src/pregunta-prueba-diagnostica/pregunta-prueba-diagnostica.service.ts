@@ -15,6 +15,7 @@ export class PreguntaPruebaDiagnosticaService {
 
     findAll() {
         return this.prisma.preguntaPruebaDiagnostica.findMany({
+            take: 15,
             include: {
                 opcionPruebaDiagnostica: {
                     select: {
