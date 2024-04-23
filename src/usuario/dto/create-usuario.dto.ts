@@ -32,4 +32,7 @@ export class CreateUsuarioDto {
     @ApiProperty()
     @IsNotEmpty({ message: i18nValidationMessage('validation.NOT_EMPTY') })
     mascotaNombre: string
+
+    @ApiProperty()
+    introduccionCompleta: boolean
 }

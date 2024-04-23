@@ -54,6 +54,7 @@ model Usuario {
   mascotaId                   String                        @db.Uuid
   mascota                     Mascota                       @relation(fields: [mascotaId], references: [id])
   mascotaNombre               String             
+  introduccionCompleta        Boolean                       @default(false)
   respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
   createdAt                   DateTime?                     @default(now())
   updatedAt                   DateTime?                     @updatedAt
