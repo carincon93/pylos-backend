@@ -55,6 +55,7 @@ model Usuario {
   mascota                     Mascota                       @relation(fields: [mascotaId], references: [id])
   mascotaNombre               String             
   introduccionCompleta        Boolean                       @default(false)
+  tiempoPruebaDiagnostica     Int?
   respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
   createdAt                   DateTime?                     @default(now())
   updatedAt                   DateTime?                     @updatedAt
