@@ -51,6 +51,11 @@ export class RespuestaPruebaDiagnosticaController {
         return this.respuestaPruebaDiagnosticaService.remove(id)
     }
 
+    @Delete(':usuarioId/restablecer-prueba')
+    restartPrueba(@Param('usuarioId') usuarioId: string) {
+        return this.respuestaPruebaDiagnosticaService.restartPrueba(usuarioId)
+    }
+
     @Get('obtener/tabla-de-posiciones')
     getTablaPosiciones() {
         return this.usuarioService.getTablaPosiciones()

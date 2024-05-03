@@ -65,4 +65,12 @@ export class RespuestaPruebaDiagnosticaService {
             },
         })
     }
+
+    restartPrueba(usuarioId: string) {
+        return this.prisma.respuestaPruebaDiagnostica.deleteMany({
+            where: {
+                usuarioId: usuarioId,
+            },
+        })
+    }
 }
