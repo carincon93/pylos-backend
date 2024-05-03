@@ -66,8 +66,17 @@ export class RespuestaPruebaDiagnosticaService {
         })
     }
 
-    restartPrueba(usuarioId: string) {
-        return this.prisma.respuestaPruebaDiagnostica.deleteMany({
+    async restartPrueba(usuarioId: string) {
+        await this.prisma.usuario.update({
+            where: {
+                id: usuarioId,
+            },
+            data: {
+                tiempoPruebaDiagnostica: null,
+            },
+        })
+
+        return await this.prisma.respuestaPruebaDiagnostica.deleteMany({
             where: {
                 usuarioId: usuarioId,
             },
