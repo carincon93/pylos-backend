@@ -52,6 +52,9 @@ export class UsuarioService {
                         opcionPruebaDiagnostica: true,
                         preguntaPruebaDiagnostica: true,
                     },
+                    orderBy: {
+                        createdAt: 'asc', // Ordenar las respuestas por createdAt en orden ascendente
+                    },
                 },
             },
         })
@@ -66,6 +69,7 @@ export class UsuarioService {
                 usuarioId: usuario.id,
                 nombre: usuario.nombre,
                 mascotaFoto: usuario.mascota.foto,
+                tiempoPruebaDiagnostica: usuario.tiempoPruebaDiagnostica,
                 puntaje,
             }
         })
