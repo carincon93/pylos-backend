@@ -24,7 +24,7 @@ export class AuthController {
         const { nombreUsuario, mascotaNombre } = loginAuthDto
 
         const findUser = await this.prisma.usuario.findFirst({
-            where: { nombreUsuario: nombreUsuario.toUpperCase(), mascotaNombre: mascotaNombre.toUpperCase() },
+            where: { nombreUsuario: nombreUsuario.toLowerCase(), mascotaNombre: mascotaNombre.toLowerCase() },
         })
 
         if (!findUser) {
