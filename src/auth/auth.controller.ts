@@ -52,7 +52,7 @@ export class AuthController {
     @Post('register')
     async register(@Res({ passthrough: true }) res: ExtendedResponse, @Body() registroAuthDto: RegistroAuthDto) {
         // Verificar si el nombre de usuario ya existe
-        const existingUser = await this.prisma.usuario.findFirst({ where: { nombreUsuario: registroAuthDto.nombreUsuario.toUpperCase() } })
+        const existingUser = await this.prisma.usuario.findFirst({ where: { nombreUsuario: registroAuthDto.nombreUsuario } })
 
         if (existingUser) {
             throw new HttpException('El nombre de usuario ya ha sido tomado', HttpStatus.BAD_REQUEST)
@@ -60,13 +60,13 @@ export class AuthController {
 
         const createdUser = await this.prisma.usuario.create({
             data: {
-                nombre: registroAuthDto.nombre.toUpperCase(),
-                nombreUsuario: registroAuthDto.nombreUsuario.toUpperCase(),
+                nombre: registroAuthDto.nombre,
+                nombreUsuario: registroAuthDto.nombreUsuario,
                 grado: registroAuthDto.grado,
                 edad: +registroAuthDto.edad,
-                colegio: registroAuthDto.colegio.toUpperCase(),
+                colegio: registroAuthDto.colegio,
                 mascotaId: registroAuthDto.mascotaId,
-                mascotaNombre: registroAuthDto.mascotaNombre.toUpperCase(),
+                mascotaNombre: registroAuthDto.mascotaNombre,
             },
         })
 
