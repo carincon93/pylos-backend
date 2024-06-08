@@ -46,6 +46,6 @@ export class PreguntaPruebaDiagnosticaController {
     async findAllWithoutRespuesta(@Req() req: Request) {
         const response = await this.authService.getUserFromToken(req)
 
-        return this.preguntaPruebaDiagnosticaService.getPreguntasAleatorias(response?.id)
+        return this.preguntaPruebaDiagnosticaService.getPreguntasPorUsuario(response?.id)
     }
 }
