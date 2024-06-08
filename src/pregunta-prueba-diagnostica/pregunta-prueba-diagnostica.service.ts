@@ -24,6 +24,9 @@ export class PreguntaPruebaDiagnosticaService {
                     },
                 },
             },
+            orderBy: {
+                createdAt: 'asc',
+            },
         })
     }
 
@@ -52,15 +55,9 @@ export class PreguntaPruebaDiagnosticaService {
         })
     }
 
-    async getPreguntasAleatorias(usuarioId: string) {
-        const respuestas = await this.prisma.respuestaPruebaDiagnostica.findMany({
-            where: {
-                usuarioId: usuarioId,
-            },
-        })
-
+    async getPreguntasPorUsuario(usuarioId: string) {
         // Obtener todas las preguntas disponibles
-        const allPreguntas = await this.prisma.preguntaPruebaDiagnostica.findMany({
+        return await this.prisma.preguntaPruebaDiagnostica.findMany({
             where: {
                 NOT: {
                     respuestaPruebaDiagnostica: {
@@ -79,24 +76,9 @@ export class PreguntaPruebaDiagnosticaService {
                     },
                 },
             },
+            orderBy: {
+                createdAt: 'asc',
+            },
         })
-
-        // Seleccionar aleatoriamente 10 preguntas
-        const randomPreguntas = this.getSeleccionAleatoria(allPreguntas, 10 - respuestas.length)
-
-        return randomPreguntas
-    }
-
-    // Función para seleccionar aleatoriamente elementos de un array
-    getSeleccionAleatoria<T>(array: T[], cantidad: number): T[] {
-        const seleccion: T[] = []
-        const copiaArray = [...array] // Copiar el array original para no modificarlo
-
-        for (let i = 0; i < cantidad; i++) {
-            const indiceAleatorio = Math.floor(Math.random() * copiaArray.length)
-            seleccion.push(copiaArray.splice(indiceAleatorio, 1)[0]) // Eliminar y agregar el elemento seleccionado
-        }
-
-        return seleccion
     }
 }
