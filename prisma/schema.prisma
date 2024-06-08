@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output = "../node_modules/.prisma/client"
+  output   = "../node_modules/.prisma/client"
 }
 
 datasource db {
@@ -15,63 +15,62 @@ datasource db {
 }
 
 model Mascota {
-  id                        String                          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  mascota                   String    
-  foto                      String    
-  usuario                   Usuario[]           
-  createdAt                 DateTime?                       @default(now())
-  updatedAt                 DateTime?                       @updatedAt
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  mascota   String
+  foto      String
+  usuario   Usuario[]
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 }
 
 model PreguntaPruebaDiagnostica {
-  id                        String                          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  pregunta                  String    
-  esPreguntaCerrada         Boolean?                        @default(true)
-  opcionPruebaDiagnostica   OpcionPruebaDiagnostica[]           
-  respuestaPruebaDiagnostica   RespuestaPruebaDiagnostica[]           
-  createdAt                 DateTime?                       @default(now())
-  updatedAt                 DateTime?                       @updatedAt
+  id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  pregunta                   String
+  esPreguntaCerrada          Boolean?                     @default(true)
+  opcionPruebaDiagnostica    OpcionPruebaDiagnostica[]
+  respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
+  createdAt                  DateTime?                    @default(now())
+  updatedAt                  DateTime?                    @updatedAt
 }
 
 model OpcionPruebaDiagnostica {
-  id                          String                        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  opcion                      String    
-  esOpcionCorrecta            Boolean    
-  preguntaPruebaDiagnosticaId String                        @db.Uuid
-  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica     @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
+  id                          String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  opcion                      String
+  esOpcionCorrecta            Boolean?
+  preguntaPruebaDiagnosticaId String                       @db.Uuid
+  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica    @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
   respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
-  createdAt                   DateTime?                     @default(now())
-  updatedAt                   DateTime?                     @updatedAt
+  createdAt                   DateTime?                    @default(now())
+  updatedAt                   DateTime?                    @updatedAt
 }
 
 model Usuario {
-  id                          String                        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  nombre                      String                        @db.VarChar(60)
-  nombreUsuario               String                        @unique @db.VarChar(15)
-  edad                        Int                           @db.Integer
-  grado                       String                        @db.VarChar(2)
-  colegio                     String                        @db.VarChar(60)
-  mascotaId                   String                        @db.Uuid
-  mascota                     Mascota                       @relation(fields: [mascotaId], references: [id])
-  mascotaNombre               String             
-  introduccionCompleta        Boolean                       @default(false)
-  tiempoPruebaDiagnostica     Int?
-  respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
-  createdAt                   DateTime?                     @default(now())
-  updatedAt                   DateTime?                     @updatedAt
+  id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nombre                     String                       @db.VarChar(60)
+  nombreUsuario              String                       @unique @db.VarChar(15)
+  edad                       Int                          @db.Integer
+  grado                      String                       @db.VarChar(2)
+  colegio                    String                       @db.VarChar(60)
+  mascotaId                  String                       @db.Uuid
+  mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
+  mascotaNombre              String
+  introduccionCompleta       Boolean                      @default(false)
+  tiempoPruebaDiagnostica    Int?
+  respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
+  createdAt                  DateTime?                    @default(now())
+  updatedAt                  DateTime?                    @updatedAt
 }
 
 model RespuestaPruebaDiagnostica {
-  id                          String                        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   respuesta                   String?
-  usuarioId                   String                        @db.Uuid
-  usuario                     Usuario                       @relation(fields: [usuarioId], references: [id])
-  opcionPruebaDiagnosticaId   String?                       @db.Uuid
-  opcionPruebaDiagnostica     OpcionPruebaDiagnostica?      @relation(fields: [opcionPruebaDiagnosticaId], references: [id])
-  preguntaPruebaDiagnosticaId String                        @db.Uuid
-  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica     @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
-  esRespuestaCorrecta         Boolean?    
-  createdAt                   DateTime?                     @default(now())
-  updatedAt                   DateTime?                     @updatedAt
+  usuarioId                   String                    @db.Uuid
+  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
+  opcionPruebaDiagnosticaId   String?                   @db.Uuid
+  opcionPruebaDiagnostica     OpcionPruebaDiagnostica?  @relation(fields: [opcionPruebaDiagnosticaId], references: [id])
+  preguntaPruebaDiagnosticaId String                    @db.Uuid
+  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
+  esRespuestaCorrecta         Boolean?
+  createdAt                   DateTime?                 @default(now())
+  updatedAt                   DateTime?                 @updatedAt
 }
-
