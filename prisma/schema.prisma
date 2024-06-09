@@ -53,7 +53,7 @@ model Usuario {
   colegio                    String                       @db.VarChar(60)
   mascotaId                  String                       @db.Uuid
   mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
-  mascotaNombre              String
+  mascotaNombre              String                       @unique @db.VarChar(15)
   introduccionCompleta       Boolean                      @default(false)
   tiempoPruebaDiagnostica    Int?
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
