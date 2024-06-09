@@ -14,7 +14,11 @@ export class UsuarioService {
     }
 
     findAll() {
-        return this.prisma.usuario.findMany()
+        return this.prisma.usuario.findMany({
+            orderBy: {
+                nombreUsuario: 'asc',
+            },
+        })
     }
 
     findOne(id: string) {
