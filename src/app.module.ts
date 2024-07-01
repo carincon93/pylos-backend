@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common'
-import { ConfigModule, ConfigService } from '@nestjs/config'
+import { ConfigModule } from '@nestjs/config'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { UsuarioModule } from './usuario/usuario.module'
@@ -9,8 +9,9 @@ import { RespuestaPruebaDiagnosticaModule } from './respuesta-prueba-diagnostica
 import { AuthModule } from './auth/auth.module'
 import { PrismaModule } from './prisma/prisma.module'
 import { MascotaModule } from './mascota/mascota.module'
+import { LecturaModule } from './lectura/lectura.module'
+import { I18nModule, AcceptLanguageResolver, QueryResolver } from 'nestjs-i18n'
 import * as path from 'path'
-import { I18nModule, AcceptLanguageResolver, QueryResolver, HeaderResolver } from 'nestjs-i18n'
 
 @Module({
     imports: [
@@ -27,9 +28,10 @@ import { I18nModule, AcceptLanguageResolver, QueryResolver, HeaderResolver } fro
         PreguntaPruebaDiagnosticaModule,
         OpcionPruebaDiagnosticaModule,
         RespuestaPruebaDiagnosticaModule,
+        LecturaModule,
+        MascotaModule,
         AuthModule,
         PrismaModule,
-        MascotaModule,
     ],
     controllers: [AppController],
     providers: [AppService],

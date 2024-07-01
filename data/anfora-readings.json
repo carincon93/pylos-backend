@@ -1,0 +1,214 @@
+[
+    {
+        "id": "1",
+        "title": "¡Cuidado, la Luna sueña!",
+        "text": "No despierten a la Luna, no la despierten que sueña, que hoy celebra su cumpleaños con lunas de otros planetas. Le cantaron las estrellas, han llegado los cometas ¡Si hasta el Sol fue a saludarla, de corbata y con chaqueta! No despierten a la Luna. ¡Silencio cuando ella sueña!, que festeja su cumpleaños con lunas, soles y estrellas",
+        "author": "María Luisa Silva. Cuentiversos para reír y jugar Galería Cecilia Palma. Santiago 2008.",
+        "questions": [
+            {
+                "text": "¿De qué se trata el poema?",
+                "answers": [
+                    { "id": 1, "text": "La llegada del Sol", "esOpcionCorrecta": false },
+                    { "id": 2, "text": "El sueño de la Luna", "esOpcionCorrecta": true },
+                    { "id": 3, "text": "El paseo de la Luna", "esOpcionCorrecta": false },
+                    { "id": 4, "text": "La visita de lunas, soles y estrellas", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "En el sueño, ¿cómo celebra su cumpleaños la Luna?",
+                "answers": [
+                    { "id": 5, "text": "Acompañada por lunas, estrellas y soles", "esOpcionCorrecta": true },
+                    { "id": 6, "text": "Vestida con corbata y chaqueta", "esOpcionCorrecta": false },
+                    { "id": 7, "text": "Despertando a los cometas", "esOpcionCorrecta": false },
+                    { "id": 8, "text": "Festejando en silencio", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "¿Cómo crees que se sentía la Luna mientras soñaba?",
+                "answers": [
+                    { "id": 9, "text": "Triste", "esOpcionCorrecta": false },
+                    { "id": 10, "text": "Hambrienta", "esOpcionCorrecta": false },
+                    { "id": 11, "text": "Dormida", "esOpcionCorrecta": false },
+                    { "id": 12, "text": "Feliz", "esOpcionCorrecta": true }
+                ]
+            },
+            {
+                "text": "El sol llegando a la fiesta es el personaje principal de este poema",
+                "answers": [
+                    { "id": 13, "text": "Falso", "esOpcionCorrecta": true },
+                    { "id": 14, "text": "Verdadero", "esOpcionCorrecta": false }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Estudiantes colombianos viajaron a la NASA ",
+        "text": "Seis estudiantes de las escuelas del departamento del Atlántico estarán de visita en el centro espacial Kennedy, invitados por la agencia espacial Nasa, en los Estados Unidos. Los estudiantes fueron seleccionados durante las Olimpiadas Departamentales de Astronomía, quienes mostraron una vocación científica. Es un ejercicio participativo que ha desarrollado la comunidad científica del departamento, dando la oportunidad de que estos niños compartan sus conocimientos en astrofísica y astronomía.",
+        "author": "Texto adaptado del periódico El Colombiano (2014): El Colombiano. ",
+        "questions": [
+            {
+                "text": "¿Qué características tienen los alumnos seleccionados?",
+                "answers": [
+                    { "id": 15, "text": "Cursan clases de cambio climático", "esOpcionCorrecta": false },
+                    { "id": 16, "text": "Aportan el financiamiento de su viaje", "esOpcionCorrecta": false },
+                    { "id": 17, "text": "Tienen habilidades científicas", "esOpcionCorrecta": true },
+                    { "id": 18, "text": "Participan usualmente en campamentos de verano", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "Selecciona una palabra que reemplace la palabra desarrollan. 'Un programa en el que desarrollan sus habilidades científicas y amplían sus conocimientos.'",
+                "answers": [
+                    { "id": 19, "text": "aportan", "esOpcionCorrecta": false },
+                    { "id": 20, "text": "aumentan", "esOpcionCorrecta": true },
+                    { "id": 21, "text": "elegidos", "esOpcionCorrecta": false },
+                    { "id": 22, "text": "caminar", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "Selecciona una palabra que reemplace la palabra participación. 'La Embajada de los Estados Unidos apoyó la participación de jóvenes colombianos.'",
+                "answers": [
+                    { "id": 23, "text": "selección", "esOpcionCorrecta": false },
+                    { "id": 24, "text": "asistencia", "esOpcionCorrecta": true },
+                    { "id": 25, "text": "gusto", "esOpcionCorrecta": false },
+                    { "id": 26, "text": "alimentación", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "El texto leído fue extraído del periódico “el colombiano” que circuló el 28 de agosto de 2014",
+                "answers": [
+                    { "id": 27, "text": "Falso", "esOpcionCorrecta": false },
+                    { "id": 28, "text": "Verdadero", "esOpcionCorrecta": true }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Niños en la NASA",
+        "text": "La NASA es la agencia espacial de los Estados Unidos. Allí entrenan a los astronautas y envían naves al espacio. A veces la NASA trabaja con la ayuda de científicos muy especiales: niños y niñas de colegio. Hubo una actividad en la que varios alumnos de distintos colegios de los Estados Unidos plantaron semillas de tomates que les entregó la NASA. Pero no eran unas semillas cualesquiera. Eran semillas espaciales: habían estado casi seis años en el espacio exterior, guardadas a bordo de una base espacial. La Nasa pidió ayuda a niños y niñas para averiguar si estas semillas crecían igual que las semillas que nunca habían abandonado la Tierra. Los jóvenes científicos plantaron las semillas espaciales junto a las semillas ordinarias y compararon cómo crecían. El resultado fue que las semillas espaciales crecieron mucho más rápido que las ordinarias y los tomates fueron más grandes y bonitos. De esta forma la NASA obtuvo datos científicos mientras los niños aprendían sobre la ciencia de la Tierra y del espacio. ",
+        "author": "Curiosidades del mundo. Tomo 1. Fundación Astoreca. Santiago de Chile.",
+        "questions": [
+            {
+                "text": "¿Quién les entregó las semillas espaciales?",
+                "answers": [
+                    { "id": 29, "text": "Una base naval", "esOpcionCorrecta": false },
+                    { "id": 30, "text": "Un colegio", "esOpcionCorrecta": false },
+                    { "id": 31, "text": "La NASA", "esOpcionCorrecta": true },
+                    { "id": 32, "text": "La Tierra", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "¿Cuál es el propósito del texto?'",
+                "answers": [
+                    { "id": 33, "text": "Enseñar los pasos para ser astronauta", "esOpcionCorrecta": false },
+                    { "id": 34, "text": "Contar una historia de niños astronautas", "esOpcionCorrecta": false },
+                    { "id": 35, "text": "Invitar a niños y niñas a pertenecer a la NASA", "esOpcionCorrecta": false },
+                    { "id": 36, "text": "Informar cómo ayudan niños y niñas a la NASA", "esOpcionCorrecta": true }
+                ]
+            },
+            {
+                "text": "¿Cómo podrías resumir este texto?",
+                "answers": [
+                    { "id": 37, "text": "Niños entrenan en la NASA", "esOpcionCorrecta": false },
+                    { "id": 38, "text": "La NASA lleva niños al espacio", "esOpcionCorrecta": false },
+                    { "id": 39, "text": "La NASA cosecha tomates espaciales", "esOpcionCorrecta": false },
+                    { "id": 40, "text": "Niños y niñas ayudan en investigaciones de la NASA", "esOpcionCorrecta": true }
+                ]
+            },
+            {
+                "text": "La NASA obtuvo datos científicos mientras los niños aprendían sobre la ciencia de la Tierra y del espacio",
+                "answers": [
+                    { "id": 41, "text": "Falso", "esOpcionCorrecta": false },
+                    { "id": 42, "text": "Verdadero", "esOpcionCorrecta": true }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "",
+        "text": "Una nave espacial es un vehículo diseñado para funcionar fuera de la superficie terrestre, en el espacio exterior. Las naves espaciales son usadas para distintas investigaciones. Las naves espaciales pueden ser tripuladas o robóticas. Las naves tripuladas transportan personas y son conducidas por astronautas, quienes se mantienen en contacto con la Tierra. Desde la cabina, los astronautas manejan varias de las funciones de la nave espacial. En cambio, las naves robóticas no tienen tripulación y son manejadas por control remoto desde la tierra. Un ejemplo de estas naves son los satélites artificiales. Cada una de las naves espaciales ha dejado nuestro planeta para recorrer y conocer distintos rincones del Sistema Solar, permitiéndonos ampliar nuestro conocimiento sobre las características y el origen de este sistema planetario.",
+        "author": "",
+        "questions": [
+            {
+                "text": "Según el texto, ¿qué son las naves robóticas?",
+                "answers": [
+                    { "id": 43, "text": "Naves artificiales", "esOpcionCorrecta": false },
+                    { "id": 44, "text": "Naves con tripulación", "esOpcionCorrecta": false },
+                    { "id": 45, "text": "Naves para viajar a satélites", "esOpcionCorrecta": false },
+                    { "id": 46, "text": "Naves manejadas desde la Tierra", "esOpcionCorrecta": true }
+                ]
+            },
+            {
+                "text": "¿Cuál de estos sería otro buen título para el texto?",
+                "answers": [
+                    { "id": 47, "text": "El espacio exterior", "esOpcionCorrecta": false },
+                    { "id": 48, "text": "Satélites artificiales", "esOpcionCorrecta": false },
+                    { "id": 49, "text": "Tipos de naves espaciales", "esOpcionCorrecta": true },
+                    { "id": 50, "text": "Los astronautas en una cabina", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "Lugar que mantiene contacto con las naves tripuladas",
+                "answers": [
+                    { "id": 51, "text": "Tierra", "esOpcionCorrecta": true },
+                    { "id": 52, "text": "Marte", "esOpcionCorrecta": false },
+                    { "id": 53, "text": "Sol", "esOpcionCorrecta": false },
+                    { "id": 54, "text": "Nave", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "Grupo de astronautas que viajan al interior de una nave",
+                "answers": [
+                    { "id": 55, "text": "Jauría", "esOpcionCorrecta": false },
+                    { "id": 56, "text": "Meseros", "esOpcionCorrecta": false },
+                    { "id": 57, "text": "Tripulación ", "esOpcionCorrecta": true },
+                    { "id": 58, "text": "Banda", "esOpcionCorrecta": false }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "¿Cómo funciona un traje espacial?",
+        "text": "En el espacio: no hay oxígeno para respirar, a la luz del Sol hace más calor que en un horno y a la sombra hace más frío que en un congelador. Por eso, un astronauta tiene que usar un traje especial para poder desplazarse fuera de su nave. En una maleta lleva el aire que necesita para respirar. Cuando el oxígeno se está terminando, una pequeña computadora en el traje le avisa. Esta también le indica si ocurre un problema inesperado.  Dentro del traje espacial corre agua por unos pequeños tubos. Esta agua mantiene la temperatura del astronauta: se entibia cuando afuera hace frío y se enfría cuando hace calor, para evitar que el cuerpo se sobrecaliente. Además, la pantalla del casco está cubierta con una película de oro, que evita que el astronauta se queme los ojos con los rayos del Sol. Los trajes espaciales son fundamentales para la protección de los astronautas y les permiten realizar sus misiones en óptimas condiciones de seguridad.",
+        "author": "Basado en Curiosidades del mundo. Tomo I. Fundación Astoreca, Santiago de Chile, 2009.",
+        "questions": [
+            {
+                "text": "¿Qué importancia tiene el traje espacial?",
+                "answers": [
+                    { "id": 59, "text": "Tiene una delgadísima película de oro", "esOpcionCorrecta": false },
+                    { "id": 60, "text": "Regula el oxígeno y la temperatura", "esOpcionCorrecta": true },
+                    { "id": 61, "text": "Está conectado a un computador", "esOpcionCorrecta": false },
+                    { "id": 62, "text": "Entrega el agua necesaria", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "¿Para qué sirve el agua del traje?",
+                "answers": [
+                    { "id": 63, "text": "Indica si algo se ha estropeado y cómo se arregla", "esOpcionCorrecta": false },
+                    { "id": 64, "text": "Entrega el oxígeno necesario para respirar", "esOpcionCorrecta": false },
+                    { "id": 65, "text": "Evita quemaduras de los ojos por el sol", "esOpcionCorrecta": false },
+                    { "id": 66, "text": "Mantiene la temperatura del cuerpo", "esOpcionCorrecta": true }
+                ]
+            },
+            {
+                "text": "¿Con que está cubierta la pantalla del casco?",
+                "answers": [
+                    { "id": 67, "text": "Una capa de bronce", "esOpcionCorrecta": false },
+                    { "id": 68, "text": "Una capa de tierra", "esOpcionCorrecta": false },
+                    { "id": 69, "text": "Una capa de oro", "esOpcionCorrecta": true },
+                    { "id": 70, "text": "Un vidrio de botella", "esOpcionCorrecta": false }
+                ]
+            },
+            {
+                "text": "En el espacio hay suficiente oxígeno para respirar",
+                "answers": [
+                    { "id": 71, "text": "Verdadero", "esOpcionCorrecta": false },
+                    { "id": 72, "text": "Falso", "esOpcionCorrecta": true }
+                ]
+            }
+        ]
+    }
+]
