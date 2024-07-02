@@ -8,7 +8,6 @@ export class CreateRespuestaPruebaDiagnosticaDto {
     respuesta: string
 
     @ApiProperty()
-    // @IsNotEmpty()
     usuarioId: string
 
     @ApiProperty()

@@ -57,6 +57,7 @@ model Usuario {
   introduccionCompleta       Boolean                      @default(false)
   tiempoPruebaDiagnostica    Int?
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
+  objetoNaveReparado         ObjetoNaveReparado[]
   createdAt                  DateTime?                    @default(now())
   updatedAt                  DateTime?                    @updatedAt
 }
@@ -71,6 +72,16 @@ model RespuestaPruebaDiagnostica {
   preguntaPruebaDiagnosticaId String                    @db.Uuid
   preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
   esRespuestaCorrecta         Boolean?
+  createdAt                   DateTime?                 @default(now())
+  updatedAt                   DateTime?                 @updatedAt
+}
+
+model ObjetoNaveReparado {
+  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  objeto                      String
+  planeta                     String
+  usuarioId                   String                    @db.Uuid
+  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
 }
