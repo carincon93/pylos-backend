@@ -4,6 +4,7 @@
         "title": "¡Cuidado, la Luna sueña!",
         "text": "No despierten a la Luna, no la despierten que sueña, que hoy celebra su cumpleaños con lunas de otros planetas. Le cantaron las estrellas, han llegado los cometas ¡Si hasta el Sol fue a saludarla, de corbata y con chaqueta! No despierten a la Luna. ¡Silencio cuando ella sueña!, que festeja su cumpleaños con lunas, soles y estrellas",
         "author": "María Luisa Silva. Cuentiversos para reír y jugar Galería Cecilia Palma. Santiago 2008.",
+        "object": "motor",
         "questions": [
             {
                 "text": "¿De qué se trata el poema?",
@@ -46,6 +47,7 @@
         "title": "Estudiantes colombianos viajaron a la NASA ",
         "text": "Seis estudiantes de las escuelas del departamento del Atlántico estarán de visita en el centro espacial Kennedy, invitados por la agencia espacial Nasa, en los Estados Unidos. Los estudiantes fueron seleccionados durante las Olimpiadas Departamentales de Astronomía, quienes mostraron una vocación científica. Es un ejercicio participativo que ha desarrollado la comunidad científica del departamento, dando la oportunidad de que estos niños compartan sus conocimientos en astrofísica y astronomía.",
         "author": "Texto adaptado del periódico El Colombiano (2014): El Colombiano. (28 de Agosto de 2014)",
+        "object": "sistema de navegación",
         "questions": [
             {
                 "text": "¿Qué características tienen los alumnos seleccionados?",
@@ -88,6 +90,7 @@
         "title": "Niños en la NASA",
         "text": "La NASA es la agencia espacial de los Estados Unidos. Allí entrenan a los astronautas y envían naves al espacio. A veces la NASA trabaja con la ayuda de científicos muy especiales: niños y niñas de colegio. Hubo una actividad en la que varios alumnos de distintos colegios de los Estados Unidos plantaron semillas de tomates que les entregó la NASA. Pero no eran unas semillas cualesquiera. Eran semillas espaciales: habían estado casi seis años en el espacio exterior, guardadas a bordo de una base espacial. La Nasa pidió ayuda a niños y niñas para averiguar si estas semillas crecían igual que las semillas que nunca habían abandonado la Tierra. Los jóvenes científicos plantaron las semillas espaciales junto a las semillas ordinarias y compararon cómo crecían. El resultado fue que las semillas espaciales crecieron mucho más rápido que las ordinarias y los tomates fueron más grandes y bonitos. De esta forma la NASA obtuvo datos científicos mientras los niños aprendían sobre la ciencia de la Tierra y del espacio. ",
         "author": "Curiosidades del mundo. Tomo 1. Fundación Astoreca. Santiago de Chile.",
+        "object": "panel solar",
         "questions": [
             {
                 "text": "¿Quién les entregó las semillas espaciales?",
@@ -99,7 +102,7 @@
                 ]
             },
             {
-                "text": "¿Cuál es el propósito del texto?'",
+                "text": "¿Cuál es el propósito del texto?",
                 "answers": [
                     { "id": 33, "text": "Enseñar los pasos para ser astronauta", "esOpcionCorrecta": false },
                     { "id": 34, "text": "Contar una historia de niños astronautas", "esOpcionCorrecta": false },
@@ -130,6 +133,7 @@
         "title": "",
         "text": "Una nave espacial es un vehículo diseñado para funcionar fuera de la superficie terrestre, en el espacio exterior. Las naves espaciales son usadas para distintas investigaciones. Las naves espaciales pueden ser tripuladas o robóticas. Las naves tripuladas transportan personas y son conducidas por astronautas, quienes se mantienen en contacto con la Tierra. Desde la cabina, los astronautas manejan varias de las funciones de la nave espacial. En cambio, las naves robóticas no tienen tripulación y son manejadas por control remoto desde la tierra. Un ejemplo de estas naves son los satélites artificiales. Cada una de las naves espaciales ha dejado nuestro planeta para recorrer y conocer distintos rincones del Sistema Solar, permitiéndonos ampliar nuestro conocimiento sobre las características y el origen de este sistema planetario.",
         "author": "",
+        "object": "ala",
         "questions": [
             {
                 "text": "Según el texto, ¿qué son las naves robóticas?",
@@ -174,6 +178,7 @@
         "title": "¿Cómo funciona un traje espacial?",
         "text": "En el espacio: no hay oxígeno para respirar, a la luz del Sol hace más calor que en un horno y a la sombra hace más frío que en un congelador. Por eso, un astronauta tiene que usar un traje especial para poder desplazarse fuera de su nave. En una maleta lleva el aire que necesita para respirar. Cuando el oxígeno se está terminando, una pequeña computadora en el traje le avisa. Esta también le indica si ocurre un problema inesperado.  Dentro del traje espacial corre agua por unos pequeños tubos. Esta agua mantiene la temperatura del astronauta: se entibia cuando afuera hace frío y se enfría cuando hace calor, para evitar que el cuerpo se sobrecaliente. Además, la pantalla del casco está cubierta con una película de oro, que evita que el astronauta se queme los ojos con los rayos del Sol. Los trajes espaciales son fundamentales para la protección de los astronautas y les permiten realizar sus misiones en óptimas condiciones de seguridad.",
         "author": "Basado en Curiosidades del mundo. Tomo I. Fundación Astoreca, Santiago de Chile, 2009.",
+        "object": "combustible",
         "questions": [
             {
                 "text": "¿Qué importancia tiene el traje espacial?",
