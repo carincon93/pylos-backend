@@ -7,10 +7,22 @@ import { PrismaService } from 'src/prisma/prisma.service'
 export class ObjetoNaveReparadoService {
     constructor(private prisma: PrismaService) {}
 
-    create(createObjetoNaveReparadoDto: CreateObjetoNaveReparadoDto) {
-        return this.prisma.objetoNaveReparado.create({
-            data: createObjetoNaveReparadoDto,
+    async create(createObjetoNaveReparadoDto: CreateObjetoNaveReparadoDto) {
+        const objectExist = await this.prisma.objetoNaveReparado.findFirst({
+            where: {
+                objeto: createObjetoNaveReparadoDto.objeto,
+                usuarioId: createObjetoNaveReparadoDto.usuarioId,
+                planeta: createObjetoNaveReparadoDto.planeta,
+            },
         })
+
+        if (!objectExist) {
+            return this.prisma.objetoNaveReparado.create({
+                data: createObjetoNaveReparadoDto,
+            })
+        }
+
+        return true
     }
 
     findAll() {
