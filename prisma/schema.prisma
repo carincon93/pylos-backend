@@ -58,6 +58,7 @@ model Usuario {
   tiempoPruebaDiagnostica    Int?
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
   objetoNaveReparado         ObjetoNaveReparado[]
+  esAdmin                    Boolean?                     @default(false)
   createdAt                  DateTime?                    @default(now())
   updatedAt                  DateTime?                    @updatedAt
 }
