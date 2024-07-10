@@ -73,6 +73,8 @@ export class UsuarioService {
                 usuarioId: usuario.id,
                 nombre: usuario.nombre,
                 mascotaFoto: usuario.mascota.foto,
+                grado: usuario.grado,
+                colegio: usuario.colegio,
                 tiempoPruebaDiagnostica: usuario.tiempoPruebaDiagnostica,
                 puntaje,
             }
