@@ -16,7 +16,7 @@ export class ObjetoNaveReparadoService {
             },
         })
 
-        if (!objectExist) {
+        if (!objectExist && createObjetoNaveReparadoDto.objeto) {
             return this.prisma.objetoNaveReparado.create({
                 data: createObjetoNaveReparadoDto,
             })
