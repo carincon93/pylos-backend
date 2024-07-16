@@ -73,6 +73,7 @@ export class RespuestaPruebaDiagnosticaService {
             },
             data: {
                 tiempoPruebaDiagnostica: null,
+                introduccionCompleta: false,
             },
         })
 
