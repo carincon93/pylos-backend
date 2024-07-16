@@ -145,7 +145,7 @@
         "title": "",
         "text": "Una nave espacial es un vehículo diseñado para funcionar fuera de la superficie terrestre, en el espacio exterior. Las naves espaciales son usadas para distintas investigaciones. Las naves espaciales pueden ser tripuladas o robóticas. Las naves tripuladas transportan personas y son conducidas por astronautas, quienes se mantienen en contacto con la Tierra. Desde la cabina, los astronautas manejan varias de las funciones de la nave espacial. En cambio, las naves robóticas no tienen tripulación y son manejadas por control remoto desde la tierra. Un ejemplo de estas naves son los satélites artificiales. Cada una de las naves espaciales ha dejado nuestro planeta para recorrer y conocer distintos rincones del Sistema Solar, permitiéndonos ampliar nuestro conocimiento sobre las características y el origen de este sistema planetario.",
         "author": "",
-        "object": "ala",
+        "object": "reactor",
         "questions": [
             {
                 "id": 13,
