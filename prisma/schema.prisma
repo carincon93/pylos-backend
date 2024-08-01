@@ -83,6 +83,7 @@ model ObjetoNaveReparado {
   planeta                     String
   usuarioId                   String                    @db.Uuid
   usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
+  tiempoRespuesta             Int?
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
 }

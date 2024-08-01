@@ -10,5 +10,8 @@ export class CreateObjetoNaveReparadoDto {
     planeta: string
 
     @ApiProperty()
+    tiempoRespuesta: number
+
+    @ApiProperty()
     usuarioId: string
 }
