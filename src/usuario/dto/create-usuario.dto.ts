@@ -37,6 +37,9 @@ export class CreateUsuarioDto {
     introduccionCompleta: boolean
 
     @ApiProperty()
+    pruebaDiagnosticaCompleta: boolean
+
+    @ApiProperty()
     tiempoPruebaDiagnostica: number
 
     @ApiProperty()

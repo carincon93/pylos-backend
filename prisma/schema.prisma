@@ -55,6 +55,7 @@ model Usuario {
   mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
   mascotaNombre              String                       @unique @db.VarChar(15)
   introduccionCompleta       Boolean                      @default(false)
+  pruebaDiagnosticaCompleta  Boolean                      @default(false)
   tiempoPruebaDiagnostica    Int?
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
   objetoNaveReparado         ObjetoNaveReparado[]
