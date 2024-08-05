@@ -51,6 +51,7 @@ export class UsuarioService {
         const usuarios = await this.prisma.usuario.findMany({
             include: {
                 mascota: true,
+                objetoNaveReparado: true,
                 respuestaPruebaDiagnostica: {
                     include: {
                         opcionPruebaDiagnostica: true,
@@ -67,7 +68,10 @@ export class UsuarioService {
         const tablaPosiciones = usuarios.map((usuario) => {
             const opcionesCorrectas = usuario.respuestaPruebaDiagnostica.filter((respuesta) => respuesta.opcionPruebaDiagnostica?.esOpcionCorrecta === true).length
             const respuestasCorrectas = usuario.respuestaPruebaDiagnostica.filter((respuesta) => respuesta.esRespuestaCorrecta === true).length
-            const puntaje = opcionesCorrectas + respuestasCorrectas
+            const objetoNaveReparados = usuario.objetoNaveReparado.length
+            const puntaje = opcionesCorrectas + respuestasCorrectas + objetoNaveReparados
+
+            const totalRepairTime = usuario.objetoNaveReparado.reduce((total, obj) => total + obj.tiempoRespuesta, 0)
 
             return {
                 usuarioId: usuario.id,
@@ -77,7 +81,7 @@ export class UsuarioService {
                 mascotaNombre: usuario.mascotaNombre,
                 grado: usuario.grado,
                 colegio: usuario.colegio,
-                tiempoPruebaDiagnostica: usuario.tiempoPruebaDiagnostica,
+                tiempoPruebaDiagnostica: usuario.tiempoPruebaDiagnostica + totalRepairTime,
                 puntaje,
             }
         })
