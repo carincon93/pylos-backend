@@ -7,13 +7,30 @@ import { PrismaService } from 'src/prisma/prisma.service'
 export class RespuestaPruebaDiagnosticaService {
     constructor(private prisma: PrismaService) {}
 
-    create(createRespuestaPruebaDiagnosticaDto: CreateRespuestaPruebaDiagnosticaDto) {
+    async create(createRespuestaPruebaDiagnosticaDto: CreateRespuestaPruebaDiagnosticaDto) {
+        const respuestasPruebaDiagnostica = await this.prisma.respuestaPruebaDiagnostica.findMany({
+            where: {
+                usuarioId: createRespuestaPruebaDiagnosticaDto.usuarioId,
+            },
+        })
+
+        if (respuestasPruebaDiagnostica.length == (await this.prisma.preguntaPruebaDiagnostica.count())) {
+            await this.prisma.usuario.update({
+                where: {
+                    id: createRespuestaPruebaDiagnosticaDto.usuarioId,
+                },
+                data: {
+                    pruebaDiagnosticaCompleta: true,
+                },
+            })
+        }
+
         return this.prisma.respuestaPruebaDiagnostica.create({
             data: createRespuestaPruebaDiagnosticaDto,
         })
     }
 
-    findAll() {
+    async findAll() {
         return this.prisma.respuestaPruebaDiagnostica.findMany({
             include: {
                 usuario: {
@@ -74,6 +91,7 @@ export class RespuestaPruebaDiagnosticaService {
             data: {
                 tiempoPruebaDiagnostica: null,
                 introduccionCompleta: false,
+                pruebaDiagnosticaCompleta: false,
             },
         })
 
