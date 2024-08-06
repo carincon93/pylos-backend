@@ -8,13 +8,22 @@ export class RespuestaPruebaDiagnosticaService {
     constructor(private prisma: PrismaService) {}
 
     async create(createRespuestaPruebaDiagnosticaDto: CreateRespuestaPruebaDiagnosticaDto) {
+        // Obtén todas las respuestas de la prueba diagnóstica del usuario
         const respuestasPruebaDiagnostica = await this.prisma.respuestaPruebaDiagnostica.findMany({
             where: {
                 usuarioId: createRespuestaPruebaDiagnosticaDto.usuarioId,
             },
         })
 
-        if (respuestasPruebaDiagnostica.length == (await this.prisma.preguntaPruebaDiagnostica.count())) {
+        // Crea una nueva respuesta para la prueba diagnóstica
+        await this.prisma.respuestaPruebaDiagnostica.create({
+            data: createRespuestaPruebaDiagnosticaDto,
+        })
+
+        // Verifica si el número de respuestas del usuario es igual al número de preguntas en la prueba diagnóstica
+        const totalPreguntas = await this.prisma.preguntaPruebaDiagnostica.count()
+        if (respuestasPruebaDiagnostica.length + 1 === totalPreguntas) {
+            // Actualiza el usuario indicando que la prueba diagnóstica está completa
             await this.prisma.usuario.update({
                 where: {
                     id: createRespuestaPruebaDiagnosticaDto.usuarioId,
@@ -25,9 +34,7 @@ export class RespuestaPruebaDiagnosticaService {
             })
         }
 
-        return this.prisma.respuestaPruebaDiagnostica.create({
-            data: createRespuestaPruebaDiagnosticaDto,
-        })
+        return
     }
 
     async findAll() {
