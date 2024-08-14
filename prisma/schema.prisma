@@ -59,6 +59,9 @@ model Usuario {
   tiempoPruebaDiagnostica    Int?
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
   objetoNaveReparado         ObjetoNaveReparado[]
+  calificacionPylos          CalificacionPylos[]
+  chatEmojis1                ChatEmojis[]  @relation("Usuario1")
+  chatEmojis2                ChatEmojis[]  @relation("Usuario2")
   esAdmin                    Boolean?                     @default(false)
   createdAt                  DateTime?                    @default(now())
   updatedAt                  DateTime?                    @updatedAt
@@ -85,6 +88,26 @@ model ObjetoNaveReparado {
   usuarioId                   String                    @db.Uuid
   usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
   tiempoRespuesta             Int?
+  createdAt                   DateTime?                 @default(now())
+  updatedAt                   DateTime?                 @updatedAt
+}
+
+model ChatEmojis {
+  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  emoji                       String
+  usuario1Id                  String                    @db.Uuid
+  usuario2Id                  String                    @db.Uuid
+  usuario1                    Usuario                   @relation("Usuario1", fields: [usuario1Id], references: [id])
+  usuario2                    Usuario                   @relation("Usuario2", fields: [usuario2Id], references: [id])
+  createdAt                   DateTime?                 @default(now())
+  updatedAt                   DateTime?                 @updatedAt
+}
+
+model CalificacionPylos {
+  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  calificacion                String
+  usuarioId                   String                    @db.Uuid
+  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
 }
