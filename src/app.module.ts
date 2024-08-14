@@ -12,6 +12,8 @@ import { MascotaModule } from './mascota/mascota.module'
 import { LecturaModule } from './lectura/lectura.module'
 import { I18nModule, AcceptLanguageResolver, QueryResolver } from 'nestjs-i18n'
 import { ObjetoNaveReparadoModule } from './objeto-nave-reparado/objeto-nave-reparado.module'
+import { CalificacionPylosModule } from './calificacion-pylos/calificacion-pylos.module'
+import { ChatEmojisModule } from './chat-emojis/chat-emojis.module'
 import * as path from 'path'
 
 @Module({
@@ -34,6 +36,8 @@ import * as path from 'path'
         AuthModule,
         PrismaModule,
         ObjetoNaveReparadoModule,
+        CalificacionPylosModule,
+        ChatEmojisModule,
     ],
     controllers: [AppController],
     providers: [AppService],
