@@ -10,8 +10,6 @@ export class CalificacionPylosService {
     async create(createCalificacionPyloDto: CreateCalificacionPyloDto) {
         const prevEvaluation = await this.findOne(createCalificacionPyloDto.usuarioId)
 
-        console.log(prevEvaluation)
-
         if (prevEvaluation.id) {
             return this.update(prevEvaluation.id, createCalificacionPyloDto)
         } else {
