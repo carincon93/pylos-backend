@@ -95,6 +95,7 @@ model ObjetoNaveReparado {
 model ChatEmojis {
   id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   emoji                       String
+  visualizado                 Boolean                   @default(false)
   usuario1Id                  String                    @db.Uuid
   usuario2Id                  String                    @db.Uuid
   usuario1                    Usuario                   @relation("Usuario1", fields: [usuario1Id], references: [id])
