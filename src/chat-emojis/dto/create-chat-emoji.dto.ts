@@ -9,6 +9,9 @@ export class CreateChatEmojiDto {
     emoji: string
 
     @ApiProperty()
+    visualizado: boolean
+
+    @ApiProperty()
     usuario1Id: string
 
     @ApiProperty()

@@ -17,15 +17,26 @@ export class ChatEmojisService {
         return `This action returns all chatEmojis`
     }
 
-    findOne(id: number) {
-        return `This action returns a #${id} chatEmoji`
+    findOne(id: string) {
+        return this.prisma.chatEmojis.findFirst({
+            include: { usuario1: true },
+            where: {
+                usuario2Id: id,
+                visualizado: false,
+            },
+        })
     }
 
-    update(id: number, updateChatEmojiDto: UpdateChatEmojiDto) {
-        return `This action updates a #${id} chatEmoji`
+    update(id: string, updateChatEmojiDto: UpdateChatEmojiDto) {
+        return this.prisma.chatEmojis.update({
+            where: {
+                id,
+            },
+            data: updateChatEmojiDto,
+        })
     }
 
-    remove(id: number) {
+    remove(id: string) {
         return `This action removes a #${id} chatEmoji`
     }
 }
