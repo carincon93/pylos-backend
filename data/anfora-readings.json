@@ -14,7 +14,8 @@
                     { "id": 2, "text": "El sueño de la Luna", "esOpcionCorrecta": true },
                     { "id": 3, "text": "El paseo de la Luna", "esOpcionCorrecta": false },
                     { "id": 4, "text": "La visita de lunas, soles y estrellas", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Piensa en el tema principal que se menciona repetidamente en el poema y que es la base de la celebración."
             },
             {
                 "id": 2,
@@ -24,7 +25,8 @@
                     { "id": 6, "text": "Vestida con corbata y chaqueta", "esOpcionCorrecta": false },
                     { "id": 7, "text": "Despertando a los cometas", "esOpcionCorrecta": false },
                     { "id": 8, "text": "Festejando en silencio", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Recuerda quiénes están presentes en la celebración de la Luna según el poema."
             },
             {
                 "id": 3,
@@ -34,7 +36,8 @@
                     { "id": 10, "text": "Hambrienta", "esOpcionCorrecta": false },
                     { "id": 11, "text": "Dormida", "esOpcionCorrecta": false },
                     { "id": 12, "text": "Feliz", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Considera el ambiente festivo del cumpleaños de la Luna. ¿Qué emoción asociarías con una fiesta de cumpleaños?"
             },
             {
                 "id": 4,
@@ -42,7 +45,8 @@
                 "answers": [
                     { "id": 13, "text": "Falso", "esOpcionCorrecta": true },
                     { "id": 14, "text": "Verdadero", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Reflexiona sobre quién o qué es el centro de atención en el poema. ¿El poema gira principalmente en torno al Sol o a otro personaje?"
             }
         ]
     },
@@ -61,7 +65,8 @@
                     { "id": 16, "text": "Aportan el financiamiento de su viaje", "esOpcionCorrecta": false },
                     { "id": 17, "text": "Tienen habilidades científicas", "esOpcionCorrecta": true },
                     { "id": 18, "text": "Participan usualmente en campamentos de verano", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Considera las habilidades que podrían haber destacado a estos estudiantes en un evento relacionado con la astronomía."
             },
             {
                 "id": 6,
@@ -71,7 +76,8 @@
                     { "id": 20, "text": "aumentan", "esOpcionCorrecta": true },
                     { "id": 21, "text": "elegidos", "esOpcionCorrecta": false },
                     { "id": 22, "text": "caminar", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Piensa en un sinónimo de 'desarrollan' que también implique un incremento o crecimiento en sus habilidades."
             },
             {
                 "id": 7,
@@ -81,7 +87,8 @@
                     { "id": 24, "text": "asistencia", "esOpcionCorrecta": true },
                     { "id": 25, "text": "gusto", "esOpcionCorrecta": false },
                     { "id": 26, "text": "alimentación", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Busca un término que se use comúnmente para describir el acto de estar presente en un evento o actividad."
             },
             {
                 "id": 8,
@@ -89,7 +96,8 @@
                 "answers": [
                     { "id": 27, "text": "Falso", "esOpcionCorrecta": false },
                     { "id": 28, "text": "Verdadero", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Revisa la fuente y la fecha del texto mencionado al principio para confirmar la veracidad de la afirmación."
             }
         ]
     },
@@ -108,7 +116,8 @@
                     { "id": 30, "text": "Un colegio", "esOpcionCorrecta": false },
                     { "id": 31, "text": "La NASA", "esOpcionCorrecta": true },
                     { "id": 32, "text": "La Tierra", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Recuerda cuál es la organización mencionada en el texto que trabaja con astronautas y realiza experimentos en el espacio."
             },
             {
                 "id": 10,
@@ -118,7 +127,8 @@
                     { "id": 34, "text": "Contar una historia de niños astronautas", "esOpcionCorrecta": false },
                     { "id": 35, "text": "Invitar a niños y niñas a pertenecer a la NASA", "esOpcionCorrecta": false },
                     { "id": 36, "text": "Informar cómo ayudan niños y niñas a la NASA", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Piensa en la razón principal por la que se menciona a los niños y la NASA en la historia."
             },
             {
                 "id": 11,
@@ -128,7 +138,8 @@
                     { "id": 38, "text": "La NASA lleva niños al espacio", "esOpcionCorrecta": false },
                     { "id": 39, "text": "La NASA cosecha tomates espaciales", "esOpcionCorrecta": false },
                     { "id": 40, "text": "Niños y niñas ayudan en investigaciones de la NASA", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Considera la colaboración entre los niños y la NASA y lo que lograron juntos."
             },
             {
                 "id": 12,
@@ -136,7 +147,8 @@
                 "answers": [
                     { "id": 41, "text": "Falso", "esOpcionCorrecta": false },
                     { "id": 42, "text": "Verdadero", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Revisa el último párrafo del texto, donde se explica el resultado de la actividad con las semillas espaciales."
             }
         ]
     },
@@ -155,7 +167,8 @@
                     { "id": 44, "text": "Naves con tripulación", "esOpcionCorrecta": false },
                     { "id": 45, "text": "Naves para viajar a satélites", "esOpcionCorrecta": false },
                     { "id": 46, "text": "Naves manejadas desde la Tierra", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Piensa en el tipo de naves que no tienen personas a bordo y son controladas desde la Tierra."
             },
             {
                 "id": 14,
@@ -165,7 +178,8 @@
                     { "id": 48, "text": "Satélites artificiales", "esOpcionCorrecta": false },
                     { "id": 49, "text": "Tipos de naves espaciales", "esOpcionCorrecta": true },
                     { "id": 50, "text": "Los astronautas en una cabina", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Busca un título que abarque los dos tipos principales de naves espaciales mencionadas en el texto."
             },
             {
                 "id": 15,
@@ -175,7 +189,8 @@
                     { "id": 52, "text": "Marte", "esOpcionCorrecta": false },
                     { "id": 53, "text": "Sol", "esOpcionCorrecta": false },
                     { "id": 54, "text": "Nave", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Considera el lugar desde el cual se controla y se mantiene comunicación con las naves que tienen personas a bordo."
             },
             {
                 "id": 16,
@@ -185,7 +200,8 @@
                     { "id": 56, "text": "Meseros", "esOpcionCorrecta": false },
                     { "id": 57, "text": "Tripulación ", "esOpcionCorrecta": true },
                     { "id": 58, "text": "Banda", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Piensa en cómo se llama al grupo de personas que viajan juntos en una nave espacial."
             }
         ]
     },
@@ -204,7 +220,8 @@
                     { "id": 60, "text": "Regula el oxígeno y la temperatura", "esOpcionCorrecta": true },
                     { "id": 61, "text": "Está conectado a un computador", "esOpcionCorrecta": false },
                     { "id": 62, "text": "Entrega el agua necesaria", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Considera las funciones principales que el traje cumple para proteger al astronauta en el espacio."
             },
             {
                 "id": 18,
@@ -214,7 +231,8 @@
                     { "id": 64, "text": "Entrega el oxígeno necesario para respirar", "esOpcionCorrecta": false },
                     { "id": 65, "text": "Evita quemaduras de los ojos por el sol", "esOpcionCorrecta": false },
                     { "id": 66, "text": "Mantiene la temperatura del cuerpo", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Piensa en cómo el agua dentro del traje contribuye a la comodidad y seguridad del astronauta en diferentes temperaturas."
             },
             {
                 "id": 19,
@@ -224,7 +242,8 @@
                     { "id": 68, "text": "Una capa de tierra", "esOpcionCorrecta": false },
                     { "id": 69, "text": "Una capa de oro", "esOpcionCorrecta": true },
                     { "id": 70, "text": "Un vidrio de botella", "esOpcionCorrecta": false }
-                ]
+                ],
+                "pista": "Revisa el material mencionado en el texto que protege los ojos del astronauta de los rayos solares."
             },
             {
                 "id": 20,
@@ -232,7 +251,8 @@
                 "answers": [
                     { "id": 71, "text": "Verdadero", "esOpcionCorrecta": false },
                     { "id": 72, "text": "Falso", "esOpcionCorrecta": true }
-                ]
+                ],
+                "pista": "Reflexiona sobre las condiciones del espacio y por qué los astronautas necesitan llevar oxígeno con ellos."
             }
         ]
     }
