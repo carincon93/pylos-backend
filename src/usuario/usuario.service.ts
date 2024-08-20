@@ -38,7 +38,21 @@ export class UsuarioService {
         })
     }
 
-    remove(id: string) {
+    async remove(id: string) {
+        await this.prisma.respuestaPruebaDiagnostica.deleteMany({
+            where: { usuarioId: id },
+        })
+
+        await this.prisma.objetoNaveReparado.deleteMany({
+            where: { usuarioId: id },
+        })
+
+        await this.prisma.chatEmojis.deleteMany({
+            where: {
+                OR: [{ usuario1Id: id }, { usuario2Id: id }],
+            },
+        })
+
         return this.prisma.usuario.delete({
             where: {
                 id,
