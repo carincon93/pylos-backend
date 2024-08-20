@@ -53,6 +53,12 @@ export class UsuarioService {
             },
         })
 
+        await this.prisma.calificacionPylos.deleteMany({
+            where: {
+                usuarioId: id,
+            },
+        })
+
         return this.prisma.usuario.delete({
             where: {
                 id,
