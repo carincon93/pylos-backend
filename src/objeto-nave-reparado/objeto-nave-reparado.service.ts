@@ -13,6 +13,7 @@ export class ObjetoNaveReparadoService {
                 objeto: createObjetoNaveReparadoDto.objeto,
                 usuarioId: createObjetoNaveReparadoDto.usuarioId,
                 planeta: createObjetoNaveReparadoDto.planeta,
+                sesion: createObjetoNaveReparadoDto.sesion,
             },
         })
 
@@ -33,10 +34,17 @@ export class ObjetoNaveReparadoService {
         return `This action returns a #${id} objetoNaveReparado`
     }
 
-    findByUser(id: string) {
+    async findByUser(id: string) {
+        const usuario = await this.prisma.usuario.findFirst({
+            where: {
+                id: id,
+            },
+        })
+
         return this.prisma.objetoNaveReparado.findMany({
             where: {
                 usuarioId: id,
+                sesion: usuario.sesion,
             },
         })
     }
