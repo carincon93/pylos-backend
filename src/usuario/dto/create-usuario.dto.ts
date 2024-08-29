@@ -43,5 +43,8 @@ export class CreateUsuarioDto {
     tiempoPruebaDiagnostica: number
 
     @ApiProperty()
+    sesion: number
+
+    @ApiProperty()
     esAdmin: boolean
 }

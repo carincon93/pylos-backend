@@ -10,7 +10,7 @@ export class CalificacionPylosService {
     async create(createCalificacionPyloDto: CreateCalificacionPyloDto) {
         const prevEvaluation = await this.findOne(createCalificacionPyloDto.usuarioId)
 
-        if (prevEvaluation.id) {
+        if (prevEvaluation?.id) {
             return this.update(prevEvaluation.id, createCalificacionPyloDto)
         } else {
             return this.prisma.calificacionPylos.create({

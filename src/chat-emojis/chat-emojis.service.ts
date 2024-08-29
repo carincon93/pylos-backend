@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { CreateChatEmojiDto } from './dto/create-chat-emoji.dto'
 import { UpdateChatEmojiDto } from './dto/update-chat-emoji.dto'
 import { PrismaService } from 'src/prisma/prisma.service'
+import { validate as validateUUID } from 'uuid'
 
 @Injectable()
 export class ChatEmojisService {
@@ -21,7 +22,7 @@ export class ChatEmojisService {
         return this.prisma.chatEmojis.findFirst({
             include: { usuario1: true },
             where: {
-                usuario2Id: id,
+                usuario2Id: String(id),
                 visualizado: false,
             },
         })

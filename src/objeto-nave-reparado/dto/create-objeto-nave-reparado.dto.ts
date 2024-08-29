@@ -13,5 +13,8 @@ export class CreateObjetoNaveReparadoDto {
     tiempoRespuesta: number
 
     @ApiProperty()
+    sesion: number
+
+    @ApiProperty()
     usuarioId: string
 }
