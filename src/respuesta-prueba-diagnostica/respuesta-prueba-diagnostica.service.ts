@@ -91,7 +91,11 @@ export class RespuestaPruebaDiagnosticaService {
     }
 
     async restartPrueba(usuarioId: string) {
-        await this.prisma.usuario.update({
+        const usuario = await this.prisma.usuario.findFirst({
+            where: { id: usuarioId },
+        })
+
+        return await this.prisma.usuario.update({
             where: {
                 id: usuarioId,
             },
@@ -99,13 +103,14 @@ export class RespuestaPruebaDiagnosticaService {
                 tiempoPruebaDiagnostica: null,
                 introduccionCompleta: false,
                 pruebaDiagnosticaCompleta: false,
+                sesionPruebaDiagnostica: usuario.sesionPruebaDiagnostica + 1,
             },
         })
 
-        return await this.prisma.respuestaPruebaDiagnostica.deleteMany({
-            where: {
-                usuarioId: usuarioId,
-            },
-        })
+        // return await this.prisma.respuestaPruebaDiagnostica.deleteMany({
+        //     where: {
+        //         usuarioId: usuarioId,
+        //     },
+        // })
     }
 }

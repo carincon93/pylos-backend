@@ -46,5 +46,8 @@ export class CreateUsuarioDto {
     sesion: number
 
     @ApiProperty()
+    sesionPruebaDiagnostica: number
+
+    @ApiProperty()
     esAdmin: boolean
 }

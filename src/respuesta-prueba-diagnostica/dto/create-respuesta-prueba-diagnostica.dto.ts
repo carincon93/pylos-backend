@@ -19,4 +19,7 @@ export class CreateRespuestaPruebaDiagnosticaDto {
 
     @ApiProperty()
     esRespuestaCorrecta: boolean
+
+    @ApiProperty()
+    sesion: number
 }

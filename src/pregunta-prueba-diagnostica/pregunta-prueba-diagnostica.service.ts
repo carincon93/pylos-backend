@@ -56,6 +56,10 @@ export class PreguntaPruebaDiagnosticaService {
     }
 
     async getPreguntasPorUsuario(usuarioId: string) {
+        const usuario = await this.prisma.usuario.findFirst({
+            where: { id: usuarioId },
+        })
+
         // Obtener todas las preguntas disponibles
         return await this.prisma.preguntaPruebaDiagnostica.findMany({
             where: {
@@ -63,6 +67,7 @@ export class PreguntaPruebaDiagnosticaService {
                     respuestaPruebaDiagnostica: {
                         some: {
                             usuarioId: usuarioId,
+                            sesion: usuario.sesionPruebaDiagnostica,
                         },
                     },
                 },
