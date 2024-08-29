@@ -12,6 +12,7 @@ export class RespuestaPruebaDiagnosticaService {
         const respuestasPruebaDiagnostica = await this.prisma.respuestaPruebaDiagnostica.findMany({
             where: {
                 usuarioId: createRespuestaPruebaDiagnosticaDto.usuarioId,
+                sesion: createRespuestaPruebaDiagnosticaDto.sesion,
             },
         })
 
@@ -22,6 +23,7 @@ export class RespuestaPruebaDiagnosticaService {
 
         // Verifica si el número de respuestas del usuario es igual al número de preguntas en la prueba diagnóstica
         const totalPreguntas = await this.prisma.preguntaPruebaDiagnostica.count()
+
         if (respuestasPruebaDiagnostica.length + 1 === totalPreguntas) {
             // Actualiza el usuario indicando que la prueba diagnóstica está completa
             await this.prisma.usuario.update({
