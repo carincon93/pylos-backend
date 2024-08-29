@@ -58,6 +58,7 @@ model Usuario {
   pruebaDiagnosticaCompleta  Boolean                      @default(false)
   tiempoPruebaDiagnostica    Int?
   sesion                     Int?                         @default(1)
+  sesionPruebaDiagnostica    Int?                         @default(1)
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
   objetoNaveReparado         ObjetoNaveReparado[]
   calificacionPylos          CalificacionPylos[]
@@ -78,6 +79,7 @@ model RespuestaPruebaDiagnostica {
   preguntaPruebaDiagnosticaId String                    @db.Uuid
   preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
   esRespuestaCorrecta         Boolean?
+  sesion                      Int?                      @default(1)
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
 }
