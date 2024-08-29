@@ -46,17 +46,18 @@ model OpcionPruebaDiagnostica {
 
 model Usuario {
   id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  nombre                     String                       @db.VarChar(60)
-  nombreUsuario              String                       @unique @db.VarChar(15)
+  nombre                     String                       
+  nombreUsuario              String                       @unique
   edad                       Int                          @db.Integer
   grado                      String                       @db.VarChar(2)
-  colegio                    String                       @db.VarChar(60)
+  colegio                    String                       
   mascotaId                  String                       @db.Uuid
   mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
-  mascotaNombre              String                       @unique @db.VarChar(15)
+  mascotaNombre              String                       @unique
   introduccionCompleta       Boolean                      @default(false)
   pruebaDiagnosticaCompleta  Boolean                      @default(false)
   tiempoPruebaDiagnostica    Int?
+  sesion                     Int?                         @default(1)
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
   objetoNaveReparado         ObjetoNaveReparado[]
   calificacionPylos          CalificacionPylos[]
@@ -88,6 +89,7 @@ model ObjetoNaveReparado {
   usuarioId                   String                    @db.Uuid
   usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
   tiempoRespuesta             Int?
+  sesion                      Int?                      @default(1)
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
 }
