@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../node_modules/.prisma/client"
@@ -18,19 +12,19 @@ model Mascota {
   id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   mascota   String
   foto      String
-  usuario   Usuario[]
   createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
+  usuario   Usuario[]
 }
 
 model PreguntaPruebaDiagnostica {
   id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   pregunta                   String
+  createdAt                  DateTime?                    @default(now())
+  updatedAt                  DateTime?                    @updatedAt
   esPreguntaCerrada          Boolean?                     @default(true)
   opcionPruebaDiagnostica    OpcionPruebaDiagnostica[]
   respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
-  createdAt                  DateTime?                    @default(now())
-  updatedAt                  DateTime?                    @updatedAt
 }
 
 model OpcionPruebaDiagnostica {
@@ -38,81 +32,94 @@ model OpcionPruebaDiagnostica {
   opcion                      String
   esOpcionCorrecta            Boolean?
   preguntaPruebaDiagnosticaId String                       @db.Uuid
-  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica    @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
-  respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
   createdAt                   DateTime?                    @default(now())
   updatedAt                   DateTime?                    @updatedAt
+  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica    @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
+  respuestaPruebaDiagnostica  RespuestaPruebaDiagnostica[]
 }
 
 model Usuario {
   id                         String                       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  nombre                     String                       
-  nombreUsuario              String                       @unique
-  edad                       Int                          @db.Integer
+  nombre                     String
+  edad                       Int
   grado                      String                       @db.VarChar(2)
-  colegio                    String                       
-  mascotaId                  String                       @db.Uuid
-  mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
-  mascotaNombre              String                       @unique
-  introduccionCompleta       Boolean                      @default(false)
-  pruebaDiagnosticaCompleta  Boolean                      @default(false)
-  tiempoPruebaDiagnostica    Int?
-  sesion                     Int?                         @default(1)
-  sesionPruebaDiagnostica    Int?                         @default(1)
-  respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
-  objetoNaveReparado         ObjetoNaveReparado[]
-  calificacionPylos          CalificacionPylos[]
-  chatEmojis1                ChatEmojis[]  @relation("Usuario1")
-  chatEmojis2                ChatEmojis[]  @relation("Usuario2")
-  esAdmin                    Boolean?                     @default(false)
+  colegio                    String
   createdAt                  DateTime?                    @default(now())
   updatedAt                  DateTime?                    @updatedAt
+  mascotaId                  String                       @db.Uuid
+  mascotaNombre              String                       @unique
+  nombreUsuario              String                       @unique
+  introduccionCompleta       Boolean                      @default(false)
+  tiempoPruebaDiagnostica    Int?
+  esAdmin                    Boolean?                     @default(false)
+  pruebaDiagnosticaCompleta  Boolean                      @default(false)
+  sesion                     Int?                         @default(1)
+  sesionPruebaDiagnostica    Int?                         @default(1)
+  feedbackRespuesta          FeedbackRespuesta[]
+  calificacionPylos          CalificacionPylos[]
+  chatEmojis1                ChatEmojis[]                 @relation("Usuario1")
+  chatEmojis2                ChatEmojis[]                 @relation("Usuario2")
+  objetoNaveReparado         ObjetoNaveReparado[]
+  respuestaPruebaDiagnostica RespuestaPruebaDiagnostica[]
+  mascota                    Mascota                      @relation(fields: [mascotaId], references: [id])
 }
 
 model RespuestaPruebaDiagnostica {
   id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  respuesta                   String?
   usuarioId                   String                    @db.Uuid
-  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
   opcionPruebaDiagnosticaId   String?                   @db.Uuid
-  opcionPruebaDiagnostica     OpcionPruebaDiagnostica?  @relation(fields: [opcionPruebaDiagnosticaId], references: [id])
-  preguntaPruebaDiagnosticaId String                    @db.Uuid
-  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
-  esRespuestaCorrecta         Boolean?
-  sesion                      Int?                      @default(1)
   createdAt                   DateTime?                 @default(now())
   updatedAt                   DateTime?                 @updatedAt
+  respuesta                   String?
+  preguntaPruebaDiagnosticaId String                    @db.Uuid
+  esRespuestaCorrecta         Boolean?
+  sesion                      Int?                      @default(1)
+  opcionPruebaDiagnostica     OpcionPruebaDiagnostica?  @relation(fields: [opcionPruebaDiagnosticaId], references: [id])
+  preguntaPruebaDiagnostica   PreguntaPruebaDiagnostica @relation(fields: [preguntaPruebaDiagnosticaId], references: [id])
+  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
 }
 
 model ObjetoNaveReparado {
-  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  objeto                      String
-  planeta                     String
-  usuarioId                   String                    @db.Uuid
-  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
-  tiempoRespuesta             Int?
-  sesion                      Int?                      @default(1)
-  createdAt                   DateTime?                 @default(now())
-  updatedAt                   DateTime?                 @updatedAt
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  objeto          String
+  planeta         String
+  usuarioId       String    @db.Uuid
+  createdAt       DateTime? @default(now())
+  updatedAt       DateTime? @updatedAt
+  tiempoRespuesta Int?
+  sesion          Int?      @default(1)
+  usuario         Usuario   @relation(fields: [usuarioId], references: [id])
 }
 
 model ChatEmojis {
-  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  emoji                       String
-  visualizado                 Boolean                   @default(false)
-  usuario1Id                  String                    @db.Uuid
-  usuario2Id                  String                    @db.Uuid
-  usuario1                    Usuario                   @relation("Usuario1", fields: [usuario1Id], references: [id])
-  usuario2                    Usuario                   @relation("Usuario2", fields: [usuario2Id], references: [id])
-  createdAt                   DateTime?                 @default(now())
-  updatedAt                   DateTime?                 @updatedAt
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  emoji       String
+  usuario1Id  String    @db.Uuid
+  usuario2Id  String    @db.Uuid
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @updatedAt
+  visualizado Boolean   @default(false)
+  usuario1    Usuario   @relation("Usuario1", fields: [usuario1Id], references: [id])
+  usuario2    Usuario   @relation("Usuario2", fields: [usuario2Id], references: [id])
 }
 
 model CalificacionPylos {
-  id                          String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  calificacion                String
-  usuarioId                   String                    @db.Uuid
-  usuario                     Usuario                   @relation(fields: [usuarioId], references: [id])
-  createdAt                   DateTime?                 @default(now())
-  updatedAt                   DateTime?                 @updatedAt
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  calificacion String
+  usuarioId    String    @db.Uuid
+  createdAt    DateTime? @default(now())
+  updatedAt    DateTime? @updatedAt
+  usuario      Usuario   @relation(fields: [usuarioId], references: [id])
+}
+
+model FeedbackRespuesta {
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  lecturaId    String
+  preguntaId   String
+  respuestaId  String
+  sesion       Int
+  usuarioId    String    @db.Uuid
+  createdAt    DateTime? @default(now())
+  updatedAt    DateTime? @updatedAt
+  usuario      Usuario   @relation(fields: [usuarioId], references: [id])
 }

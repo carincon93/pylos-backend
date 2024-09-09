@@ -14,6 +14,7 @@ import { I18nModule, AcceptLanguageResolver, QueryResolver } from 'nestjs-i18n'
 import { ObjetoNaveReparadoModule } from './objeto-nave-reparado/objeto-nave-reparado.module'
 import { CalificacionPylosModule } from './calificacion-pylos/calificacion-pylos.module'
 import { ChatEmojisModule } from './chat-emojis/chat-emojis.module'
+import { FeedbackRespuestaModule } from './feedback-respuesta/feedback-respuesta.module';
 import * as path from 'path'
 
 @Module({
@@ -38,6 +39,7 @@ import * as path from 'path'
         ObjetoNaveReparadoModule,
         CalificacionPylosModule,
         ChatEmojisModule,
+        FeedbackRespuestaModule,
     ],
     controllers: [AppController],
     providers: [AppService],
