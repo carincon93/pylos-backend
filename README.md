@@ -20,7 +20,7 @@ npm install -g prisma
 Clona este repositorio en tu máquina local con el siguiente comando:
 
 ```bash
-git clone https://github.com/[usuario]/[repositorio].git
+git clone https://github.com/carincon93/pylos-backend.git
 ```
 
 Ingresar al directorio del proyecto
