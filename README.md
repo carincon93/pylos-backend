@@ -2,6 +2,8 @@
 
 Este es el backend del proyecto desarrollado con [NestJS](https://nestjs.com/) y [Prisma](https://www.prisma.io/) para la gestión de la base de datos. A continuación, se describen los pasos para configurar, ejecutar y migrar la base de datos.
 
+![156shots_so](https://github.com/user-attachments/assets/32ee4b05-5457-45ad-998e-733be5364b34)
+
 ---
 
 ## **Requisitos previos**
